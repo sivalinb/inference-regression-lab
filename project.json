@@ -1,0 +1,6 @@
+{
+  "slug": "inference-regression-lab",
+  "title": "Inference Regression Lab",
+  "description": "Measure streaming inference and catch performance regressions.",
+  "port": 8504
+}

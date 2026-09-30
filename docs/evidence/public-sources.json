@@ -1,0 +1,152 @@
+[
+  {
+    "id": "otel-http",
+    "status": "ok",
+    "bytes": 10086,
+    "sha256": "1c3977c8aad4a81514a77d7b14adad19c27e072956d80477beeecce8337475c9",
+    "retrieved_at": 1790739408.051061,
+    "source": {
+      "id": "otel-http",
+      "title": "OpenTelemetry HTTP metric conventions",
+      "url": "https://github.com/open-telemetry/semantic-conventions",
+      "download_url": "https://raw.githubusercontent.com/open-telemetry/semantic-conventions/main/model/http/metrics.yaml",
+      "license": "Apache-2.0",
+      "purpose": "Compare instrumentation contracts with public semantic conventions"
+    }
+  },
+  {
+    "id": "openmetrics",
+    "status": "ok",
+    "bytes": 78489,
+    "sha256": "3115ed69476ddb5e4b64ebf363f1a8f5d0f0a7cc2a6263ea612360d5357f877e",
+    "retrieved_at": 1790739408.312938,
+    "source": {
+      "id": "openmetrics",
+      "title": "OpenMetrics specification",
+      "url": "https://github.com/prometheus/OpenMetrics",
+      "download_url": "https://raw.githubusercontent.com/prometheus/OpenMetrics/main/specification/OpenMetrics.md",
+      "license": "Apache-2.0",
+      "purpose": "Reference for exposition parsing and metric types"
+    }
+  },
+  {
+    "id": "container-releases",
+    "status": "ok",
+    "bytes": 109517,
+    "sha256": "b8843268087b1e7de0a3f911b2a7347af911535dd34ec878e089ac55d720c0fe",
+    "retrieved_at": 1790739408.8807979,
+    "source": {
+      "id": "container-releases",
+      "title": "Apple Container release metadata",
+      "url": "https://github.com/apple/container/releases",
+      "download_url": "https://api.github.com/repos/apple/container/releases?per_page=10",
+      "license": "Public GitHub metadata; linked code Apache-2.0",
+      "purpose": "Attach runtime-version provenance and inspect release changes"
+    }
+  },
+  {
+    "id": "pkl-releases",
+    "status": "ok",
+    "bytes": 255544,
+    "sha256": "c4a734229b938c7c7c0a6be29710bf59e0bf597c0d340c609eab7df2b62c446a",
+    "retrieved_at": 1790739409.3551638,
+    "source": {
+      "id": "pkl-releases",
+      "title": "Pkl release metadata",
+      "url": "https://github.com/apple/pkl/releases",
+      "download_url": "https://api.github.com/repos/apple/pkl/releases?per_page=10",
+      "license": "Public GitHub metadata; linked code Apache-2.0",
+      "purpose": "Configuration-tool provenance"
+    }
+  },
+  {
+    "id": "usgs-quakes",
+    "status": "ok",
+    "bytes": 164352,
+    "sha256": "bb0a2077728e3709e4ae63d556c357aaec4c8023d6b867688aa1e8562b88e369",
+    "retrieved_at": 1790739409.509517,
+    "source": {
+      "id": "usgs-quakes",
+      "title": "USGS earthquakes, past day",
+      "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php",
+      "download_url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson",
+      "license": "USGS public domain; verify third-party notices",
+      "purpose": "Real public event records for sandbox analysis and replay inputs"
+    }
+  },
+  {
+    "id": "nab-taxi",
+    "status": "ok",
+    "bytes": 265771,
+    "sha256": "d8fa6f7f0734bf5c8be12c52a94e20a82664c397d9dec4449156bd453d32856d",
+    "retrieved_at": 1790739409.77189,
+    "source": {
+      "id": "nab-taxi",
+      "title": "NAB NYC taxi passenger time series",
+      "url": "https://github.com/numenta/NAB",
+      "download_url": "https://raw.githubusercontent.com/numenta/NAB/master/data/realKnownCause/nyc_taxi.csv",
+      "license": "NAB repository AGPL-3.0; upstream dataset attribution applies",
+      "purpose": "Optional external time series for anomaly analysis; downloaded locally, not redistributed"
+    }
+  },
+  {
+    "id": "nab-cpu",
+    "status": "ok",
+    "bytes": 119229,
+    "sha256": "01613e6f632d067f11a5dfd40a188b0789752b388d9bc77a398bd06333878a76",
+    "retrieved_at": 1790739410.0085561,
+    "source": {
+      "id": "nab-cpu",
+      "title": "NAB AWS EC2 CPU utilization",
+      "url": "https://github.com/numenta/NAB",
+      "download_url": "https://raw.githubusercontent.com/numenta/NAB/master/data/realAWSCloudwatch/ec2_cpu_utilization_5f5533.csv",
+      "license": "NAB repository AGPL-3.0",
+      "purpose": "Compare anomaly detector behavior on public infrastructure telemetry"
+    }
+  },
+  {
+    "id": "gsm8k",
+    "status": "ok",
+    "bytes": 749738,
+    "sha256": "3730d312f6e3440559ace48831e51066acaca737f6eabec99bccb9e4b3c39d14",
+    "retrieved_at": 1790739410.365151,
+    "source": {
+      "id": "gsm8k",
+      "title": "GSM8K held-out math questions",
+      "url": "https://github.com/openai/grade-school-math",
+      "download_url": "https://raw.githubusercontent.com/openai/grade-school-math/master/grade_school_math/data/test.jsonl",
+      "license": "MIT",
+      "purpose": "Real public inference prompts with exact numeric-answer evaluation"
+    }
+  },
+  {
+    "id": "container-resources",
+    "status": "ok",
+    "bytes": 6042,
+    "sha256": "30d08c2a174cff8e00471fc4862872b76e4a0e951b5d1131c9e6c2c2068b899b",
+    "retrieved_at": 1790739410.56424,
+    "source": {
+      "id": "container-resources",
+      "title": "Apple Container resource documentation",
+      "url": "https://github.com/apple/container/blob/main/docs/resource-usage.md",
+      "download_url": "https://raw.githubusercontent.com/apple/container/main/docs/resource-usage.md",
+      "license": "Apache-2.0",
+      "purpose": "Ground interpretation of CPU, memory, and I/O metrics"
+    }
+  },
+  {
+    "id": "prometheus-hardware",
+    "status": "ok",
+    "bytes": 20882,
+    "sha256": "596da9c08a087d2d0aa67a85e01d120ca7d0bee6bf291aea9d7fe373d9fa389a",
+    "retrieved_at": 1790739410.796522,
+    "source": {
+      "id": "prometheus-hardware",
+      "title": "Prometheus node exporter README",
+      "url": "https://github.com/prometheus/node_exporter",
+      "download_url": "https://raw.githubusercontent.com/prometheus/node_exporter/master/README.md",
+      "license": "Apache-2.0",
+      "purpose": "Public reference for host telemetry and collector coverage"
+    }
+  }
+]

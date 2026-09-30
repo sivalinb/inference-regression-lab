@@ -1,0 +1,44 @@
+[
+  {
+    "id": "config",
+    "title": "Pkl configuration validation",
+    "url": "https://pkl-lang.org/index.html",
+    "text": "Pkl evaluates typed configuration and checks constraints. Configuration validity is different from runtime correctness: verify emitted telemetry and workload behavior separately. A failed experiment must report the actual failed checks and preserve evidence."
+  },
+  {
+    "id": "isolation",
+    "title": "Apple Container isolation model",
+    "url": "https://github.com/apple/container/blob/main/docs/technical-overview.md",
+    "text": "Apple Container runs each Linux container in a lightweight VM. Host mounts and network access determine the resources exposed to a workload. VM isolation does not make unrestricted host mounts safe. Test cancellation, cleanup, and cross-job data separation."
+  },
+  {
+    "id": "resources",
+    "title": "Runtime resource accounting",
+    "url": "https://github.com/apple/container/blob/main/docs/resource-usage.md",
+    "text": "CPU usage above 100 percent can represent multiple cores. Containers share physical host capacity. Guest memory usage and macOS VM process memory are different measurements. Compare repeated runs under known workloads before claiming a regression."
+  },
+  {
+    "id": "metrics",
+    "title": "Prometheus metric design",
+    "url": "https://prometheus.io/docs/practices/instrumentation/",
+    "text": "Each unique metric label combination creates a time series. Unbounded request identifiers can cause a cardinality explosion. Counter values accumulate; calculate rates across an interval. A contract should define required labels, allowed labels, and series budgets."
+  },
+  {
+    "id": "recovery",
+    "title": "Collector resiliency",
+    "url": "https://opentelemetry.io/docs/collector/resiliency/",
+    "text": "Queues and retry policies affect telemetry delivery during downstream outages. Durable storage can preserve queued records across crashes. Measure loss and duplicates using unique event identifiers and compare accepted events with delivered events; a simulation is not proof of production delivery guarantees."
+  },
+  {
+    "id": "inference",
+    "title": "llama.cpp server streaming",
+    "url": "https://github.com/ggml-org/llama.cpp/tree/master/tools/server",
+    "text": "Time to first token measures the interval until the first nonempty generated content. Throughput requires a token count from the inference server, not a count of streamed chunks. Record prompt, model identity, warmup policy, concurrency, and raw per-request durations. Separate protocol replay from measured model inference."
+  },
+  {
+    "id": "evals",
+    "title": "Evidence evaluation methodology",
+    "url": "https://github.com/sivalinb",
+    "text": "Evaluate retrieval using held-out questions with expected evidence identifiers. Citation membership checks confirm that cited identifiers exist, but do not establish factual accuracy. Label synthetic fixtures, simulations, live measurements, and public observations explicitly. Report failure cases instead of inventing successful results."
+  }
+]

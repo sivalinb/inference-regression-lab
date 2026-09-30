@@ -1,0 +1,14 @@
+{
+  "mode": "LLM rejected",
+  "answer": "The model response failed citation validation. Review the retrieved evidence below.",
+  "citations": [
+    {
+      "id": "metrics",
+      "title": "Prometheus metric design",
+      "url": "https://prometheus.io/docs/practices/instrumentation/",
+      "text": "Each unique metric label combination creates a time series. Unbounded request identifiers can cause a cardinality explosion. Counter values accumulate; calculate rates across an interval. A contract should define required labels, allowed labels, and series budgets.",
+      "score": 0.3233
+    }
+  ],
+  "abstained": true
+}

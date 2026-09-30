@@ -1,0 +1,31 @@
+name: Live model validation
+on:
+  workflow_dispatch:
+    inputs:
+      endpoint:
+        description: Running model's chat API base URL
+        required: true
+        default: http://127.0.0.1:8080/v1
+      model:
+        description: Model identifier
+        required: true
+        default: local
+permissions:
+  contents: read
+jobs:
+  live:
+    runs-on: [self-hosted, macOS, ARM64]
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 -m venv .venv && .venv/bin/pip install -r requirements-dev.txt
+      - name: Benchmark the explicitly configured model
+        env:
+          BENCHMARK_ENDPOINT: ${{ inputs.endpoint }}
+          BENCHMARK_MODEL: ${{ inputs.model }}
+        run: .venv/bin/python scripts/run.py --live --endpoint "$BENCHMARK_ENDPOINT" --model "$BENCHMARK_MODEL"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: live-model-evidence
+          path: artifacts/*.json

@@ -1,0 +1,15 @@
+{
+  "prompt_id": "explain-1",
+  "status": "cancelled",
+  "ttft_ms": 8.925416972488165,
+  "duration_ms": 18.213916977401823,
+  "completion_tokens": null,
+  "content_chunks": 2,
+  "text": "A tele",
+  "server_model": "/models/SmolLM2-135M-Instruct-Q4_K_M.gguf",
+  "chunk_arrival_seconds": [
+    0.008925416972488165,
+    0.01811008300865069
+  ],
+  "numeric_exact_match": null
+}

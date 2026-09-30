@@ -1,0 +1,32 @@
+name: Verify
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  portable:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: pip install -r requirements-dev.txt
+      - name: Install pinned Pkl
+        run: |
+          curl -fsSL https://github.com/apple/pkl/releases/download/0.32.1/pkl-linux-amd64 -o /tmp/pkl
+          chmod +x /tmp/pkl
+          echo "PKL_BIN=/tmp/pkl" >> "$GITHUB_ENV"
+      - run: python scripts/export_config.py && git diff --exit-code config/default.json
+      - run: /tmp/pkl test config/tests.pkl
+      - run: ruff check .
+      - run: pytest -q --junitxml=artifacts/pytest.xml
+      - run: python scripts/evaluate.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: verification-evidence
+          path: |
+            artifacts/pytest.xml
+            artifacts/evaluation.json

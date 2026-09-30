@@ -1,0 +1,12 @@
+module InferenceExperiment
+project: String = "inference-regression-lab"
+cpus: Int(this >= 1 && this <= 8) = 2
+memoryMb: Int(this >= 512 && this <= 8192) = 1024
+requests: Int(this >= 2 && this <= 100) = 12
+concurrency: Int(this >= 1 && this <= 8) = 2
+maxTokens: Int(this >= 1 && this <= 512) = 48
+deadlineSeconds: Int(this >= 2 && this <= 120) = 30
+warmupRequests: Int(this >= 0 && this <= 5) = 1
+maxP95TtftMs: Float(this > 0) = 5000.0
+maxErrorRate: Float(this >= 0 && this <= 1) = 0.05
+regressionTolerance: Float(this >= 0 && this <= 1) = 0.20

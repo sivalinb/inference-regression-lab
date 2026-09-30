@@ -1,0 +1,18 @@
+{
+  "pytest": {
+    "exit_code": 0,
+    "tail": "........................                                                 [100%]\n24 passed in 3.70s\n"
+  },
+  "eval": {
+    "exit_code": 0,
+    "tail": "{\n  \"retrieval_hit_at_3\": 1.0,\n  \"abstention_passed\": true,\n  \"retrieval_cases\": [\n    {\n      \"question\": \"What makes metric labels create too many time series?\",\n      \"expected\": \"metrics\",\n      \"retrieved\": [\n        \"metrics\"\n      ]\n    },\n    {\n      \"question\": \"Can queued telemetry survive a crash using durable storage?\",\n      \"expected\": \"recovery\",\n      \"retrieved\": [\n        \"recovery\",\n        \"config\"\n      ]\n    },\n    {\n      \"question\": \"How should streamed chunks be used for token throughput?\",\n      \"expected\": \"inference\",\n      \"retrieved\": [\n        \"inference\"\n      ]\n    },\n    {\n      \"question\": \"Why do host and guest memory measurements differ?\",\n      \"expected\": \"resources\",\n      \"retrieved\": [\n        \"resources\",\n        \"isolation\",\n        \"evals\"\n      ]\n    },\n    {\n      \"question\": \"How do VM mounts affect isolated job security?\",\n      \"expected\": \"isolation\",\n      \"retrieved\": [\n        \"isolation\",\n        \"recovery\",\n        \"resources\"\n      ]\n    }\n  ],\n  \"domain_checks\": [\n    {\n      \"case\": \"same baseline\",\n      \"passed\": true\n    },\n    {\n      \"case\": \"50 percent regression\",\n      \"passed\": true\n    }\n  ],\n  \"mode\": \"offline evaluation; no live runtime or model claims\",\n  \"passed\": true\n}\n"
+  },
+  "pkl": {
+    "exit_code": 0,
+    "tail": "module tests\n  facts\n    \u2714 positive allocation\n\n100.0% tests pass [1 passed], 100.0% asserts pass [2 passed]\n"
+  },
+  "lint": {
+    "exit_code": 0,
+    "tail": "All checks passed!\n"
+  }
+}

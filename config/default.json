@@ -1,0 +1,16 @@
+{
+  "source_sha256": "890c36a03c4201a57ada9e95879b171bed037ae2527a8f7edd7385c6babd4132",
+  "config": {
+    "project": "inference-regression-lab",
+    "cpus": 2,
+    "memoryMb": 1024,
+    "requests": 12,
+    "concurrency": 2,
+    "maxTokens": 48,
+    "deadlineSeconds": 30,
+    "warmupRequests": 1,
+    "maxP95TtftMs": 5000.0,
+    "maxErrorRate": 0.05,
+    "regressionTolerance": 0.2
+  }
+}

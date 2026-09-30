@@ -1,0 +1,24 @@
+{
+  "verification_date_utc": "2026-09-30",
+  "os": "macOS 26.6.2",
+  "architecture": "arm64",
+  "python": "3.12.14",
+  "pkl": "0.32.1",
+  "apple_container": "1.5.0",
+  "images": {
+    "ghcr.io/ggml-org/llama.cpp:server": {
+      "index_digest": "sha256:f9115c95639e60abc09d4ea83b26fd4d56c66aa1174594393335a514da00c283",
+      "variants": [
+        {
+          "platform": {
+            "architecture": "arm64",
+            "os": "linux"
+          },
+          "digest": "sha256:219cb3ca88ca1c76ae220f2d18167c2f2aa4bf04a038b54859d058b8d7def4b5",
+          "version": "b11243"
+        }
+      ]
+    }
+  },
+  "note": "Single local development machine; not a controlled hardware benchmark."
+}

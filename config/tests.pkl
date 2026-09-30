@@ -1,0 +1,5 @@
+amends "pkl:test"
+import "default.pkl"
+facts {
+  ["positive allocation"] { `default`.cpus > 0; `default`.memoryMb >= 256 }
+}
